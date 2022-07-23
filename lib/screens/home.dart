@@ -77,7 +77,7 @@ class HomeState extends State<Home>{
             localStorage.remove('token');
             
             if (!mounted) return;
-            Navigator.pushReplacement(context, MaterialPageRoute(builder: (BuildContext context) => Login()));
+            Navigator.pushReplacement(context, MaterialPageRoute(builder: (BuildContext context) => const Login()));
         }
     }
 }
