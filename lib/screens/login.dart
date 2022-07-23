@@ -160,8 +160,6 @@ class _LoginState extends State<Login> {
         var response = await Network().auth(data, '/login');
         var body = json.decode(response.body);
 
-        print(body);
-
         if (body['success']) {
             SharedPreferences localStorage = await SharedPreferences.getInstance();
             localStorage.setString('token', json.encode(body['data']['access_token']));

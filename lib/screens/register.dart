@@ -221,8 +221,6 @@ class _RegisterState extends State<Register> {
         var res = await Network().auth(data, '/register');
         var body = json.decode(res.body);
 
-        print(body);
-
         if (body['success']) {
             if (!mounted) return;
             Navigator.pushNamed(context, 'login');
