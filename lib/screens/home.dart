@@ -36,7 +36,7 @@ class HomeState extends State<Home>{
         return Scaffold(
             backgroundColor: const Color(0xff151515),
             appBar: AppBar(
-                title: const Text('Home'),
+                title: const Text('Inicio'),
                 backgroundColor: const Color(0xff151515),
                 automaticallyImplyLeading: false,
                 actions: [

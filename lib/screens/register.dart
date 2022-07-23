@@ -71,11 +71,11 @@ class _RegisterState extends State<Register> {
                                                         cursorColor: Colors.blue,
                                                         keyboardType: TextInputType.text,
                                                         decoration: const InputDecoration(
-                                                            hintText: "Name",
+                                                            hintText: "Nombre completo",
                                                         ),
                                                         validator: (nameValue){
                                                             if(nameValue == null || nameValue.isEmpty){
-                                                                return 'Please enter your full name';
+                                                                return 'Ingrese su nombre completo';
                                                             }
                                                             name = nameValue;
                                                             return null;
@@ -89,11 +89,11 @@ class _RegisterState extends State<Register> {
                                                         cursorColor: Colors.blue,
                                                         keyboardType: TextInputType.text,
                                                         decoration: const InputDecoration(
-                                                            hintText: "Username",
+                                                            hintText: "Nombre de usuario",
                                                         ),
                                                         validator: (usernameValue){
                                                             if(usernameValue == null || usernameValue.isEmpty){
-                                                                return 'Please enter your username';
+                                                                return 'Ingrese su nombre de usuario';
                                                             }
                                                             username = usernameValue;
                                                             return null;
@@ -106,10 +106,10 @@ class _RegisterState extends State<Register> {
                                                     child: TextFormField(
                                                         cursorColor: Colors.blue,
                                                         keyboardType: TextInputType.emailAddress,
-                                                        decoration: const InputDecoration(hintText: "Email"),
+                                                        decoration: const InputDecoration(hintText: "Correo electrónico"),
                                                         validator: (emailValue){                                                   
                                                             if(emailValue == null || emailValue.isEmpty){
-                                                                return 'Please enter your email';
+                                                                return 'Ingrese su correo electronico';
                                                             }
                                                             email = emailValue;
                                                             return null;
@@ -124,7 +124,7 @@ class _RegisterState extends State<Register> {
                                                         keyboardType: TextInputType.text,
                                                         obscureText: _secureText,
                                                         decoration: InputDecoration(
-                                                            hintText: "Password",
+                                                            hintText: "Contraseña",
                                                             suffixIcon: IconButton(
                                                                 onPressed: showHide,
                                                                 icon: Icon(_secureText ? Icons.visibility_off : Icons.visibility),
@@ -132,7 +132,7 @@ class _RegisterState extends State<Register> {
                                                         ),
                                                         validator: (passwordValue){
                                                             if(passwordValue == null || passwordValue.isEmpty){
-                                                                return 'Please enter your password';
+                                                                return 'Ingrese su contraseña';
                                                             }
                                                             password = passwordValue;
                                                             return null;
@@ -147,7 +147,7 @@ class _RegisterState extends State<Register> {
                                                         keyboardType: TextInputType.text,
                                                         obscureText: _secureText,
                                                         decoration: InputDecoration(
-                                                            hintText: "Confirm password",
+                                                            hintText: "Confirmar contraseña",
                                                             suffixIcon: IconButton(
                                                                 onPressed: showHide,
                                                                 icon: Icon(_secureText ? Icons.visibility_off : Icons.visibility)
@@ -155,7 +155,7 @@ class _RegisterState extends State<Register> {
                                                         ),
                                                         validator: (passwordConfirmationValue){
                                                             if(passwordConfirmationValue == null || passwordConfirmationValue.isEmpty){
-                                                                return 'Please confir your password';
+                                                                return 'Confirme su contraseña';
                                                             }
                                                             passwordConfirmation = passwordConfirmationValue;
                                                             return null;
@@ -171,7 +171,7 @@ class _RegisterState extends State<Register> {
                                                                 register();
                                                             }
                                                         },
-                                                        child: const Text('Submit'),
+                                                        child: const Text('Enviar'),
                                                     ),
                                                 ),
                                             ],
@@ -187,7 +187,7 @@ class _RegisterState extends State<Register> {
                                         Navigator.pushNamed(context, 'login');
                                     },
                                     child: const Text(
-                                        'Already have an account? ',
+                                        '¿Ya tienes una cuenta?',
                                         style: TextStyle(
                                             color: Colors.white,
                                             fontSize: 15.0,

@@ -58,21 +58,24 @@ class _LoginState extends State<Login> {
                                     borderRadius: BorderRadius.circular(14),
                                 ),
                                 child: Padding(
+
                                     padding: const EdgeInsets.all(24.0),
                                     child: Form(
                                         key: _formKey,
                                         child: Column(
                                             crossAxisAlignment: CrossAxisAlignment.center,
                                             children: [
+                                                const Text("Iniciar sesión", textAlign: TextAlign.center, style: TextStyle(fontSize: 24, fontWeight: FontWeight.bold)),
+
                                                 Padding(
                                                     padding: const EdgeInsets.symmetric(vertical: 16.0),
                                                     child: TextFormField(
                                                         cursorColor: Colors.blue,
                                                         keyboardType: TextInputType.emailAddress,
-                                                        decoration: const InputDecoration(hintText: "Email"),
+                                                        decoration: const InputDecoration(hintText: "Correo electrónico"),
                                                         validator: (emailValue){                                                   
                                                             if(emailValue == null || emailValue.isEmpty){
-                                                                return 'Please enter your email';
+                                                                return 'Por favor, ingrese su correo';
                                                             }
                                                             email = emailValue;
                                                             return null;
@@ -87,7 +90,7 @@ class _LoginState extends State<Login> {
                                                         keyboardType: TextInputType.text,
                                                         obscureText: _secureText,
                                                         decoration: InputDecoration(
-                                                            hintText: "Password",
+                                                            hintText: "Contraseña",
                                                             suffixIcon: IconButton(
                                                                 onPressed: showHide,
                                                                 icon: Icon(_secureText ? Icons.visibility_off : Icons.visibility),
@@ -95,7 +98,7 @@ class _LoginState extends State<Login> {
                                                         ),
                                                         validator: (passwordValue){
                                                             if(passwordValue == null || passwordValue.isEmpty){
-                                                                return 'Please enter your password';
+                                                                return 'Por favor, ingrese su contraseña';
                                                             }
                                                             password = passwordValue;
                                                             return null;
@@ -111,7 +114,7 @@ class _LoginState extends State<Login> {
                                                                 login();
                                                             }
                                                         },
-                                                        child: const Text('Submit'),
+                                                        child: const Text('Enviar'),
                                                     ),
                                                 ),
                                             ],
@@ -127,7 +130,7 @@ class _LoginState extends State<Login> {
                                         Navigator.pushNamed(context, 'register');
                                     },
                                     child: const Text(
-                                        'Create new Account',
+                                        'Crear una nueva cuenta',
                                         style: TextStyle(
                                             color: Colors.white,
                                             fontSize: 15.0,
